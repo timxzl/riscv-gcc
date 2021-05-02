@@ -440,14 +440,15 @@
 
 ;; TODO(xzl): maybe this can be changed to plus:SI with unspec_volatile (const_int 0)
 (define_insn "riscv_gradd"
-  [(unspec_volatile [
-      (match_operand:SI 0 "register_operand" "=r")
+  [(set (match_operand:SI 0 "register_operand" "=r")
+    (unspec_volatile [
       (match_operand:SI 1 "register_operand" "r")
       (match_operand:SI 2 "register_operand" "r")]
-    UNSPECV_GRADD)]
+    UNSPECV_GRADD))]
   ""
   "gradd\t%0,%1,%2"
   [(set_attr "mode" "SI")])
+
 
 
 ;;
