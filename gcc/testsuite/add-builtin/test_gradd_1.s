@@ -8,7 +8,7 @@
 	.globl	g
 	.type	g, @function
 g:
-	gradd	a0,a0,a1
+	graddw	a0,a0,a1
 	sext.w	a0,a0
 	ret
 	.size	g, .-g

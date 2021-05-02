@@ -8,7 +8,7 @@
 	.globl	g
 	.type	g, @function
 g:
-	gradd	a0,a0,a1
+	graddw	a0,a0,a1
 	sext.w	a0,a0
 	ret
 	.size	g, .-g
@@ -16,13 +16,13 @@ g:
 	.globl	f
 	.type	f, @function
 f:
-	gradd	a6,a0,a1
+	graddw	a6,a0,a1
 	addiw	a4,a0,1
 	addiw	a3,a1,2
-	gradd	a5,a4,a3
-	gradd	a2,a0,a1
-	gradd	a4,a4,a3
-	gradd	a0,a0,a1
+	graddw	a5,a4,a3
+	graddw	a2,a0,a1
+	graddw	a4,a4,a3
+	graddw	a0,a0,a1
 	addw	a5,a5,a6
 	addw	a5,a5,a2
 	addw	a5,a5,a4

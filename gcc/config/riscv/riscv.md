@@ -446,7 +446,11 @@
       (match_operand:SI 2 "register_operand" "r")]
     UNSPECV_GRADD))]
   ""
-  "gradd\t%0,%1,%2"
+  {
+    return //TARGET_REAL_GREAT_ARITH ?
+      (TARGET_64BIT ? "graddw\t%0,%1,%2" : "gradd\t%0,%1,%2");
+      //(TARGET_64BIT ? "addw\t%0,%1,%2" : "add\t%0,%1,%2");
+  }
   [(set_attr "mode" "SI")])
 
 
