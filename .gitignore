@@ -57,3 +57,14 @@ REVISION
 /mpc*
 /gmp*
 /isl*
+
+# VS code
+/.vscode
+/settings.json
+/c_cpp_properties.json
+
+# gtags, etc.
+GPATH
+GRTAGS
+GTAGS
+
