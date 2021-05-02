@@ -11762,6 +11762,7 @@ is_inexpensive_builtin (tree decl)
       case BUILT_IN_LLABS:
       case BUILT_IN_PREFETCH:
       case BUILT_IN_ACC_ON_DEVICE:
+      case BUILT_IN_GREATMUL:
 	return true;
 
       default:
